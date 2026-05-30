@@ -1,0 +1,47 @@
+[
+  {
+    "id": "GF-001",
+    "name": "Apapa Port Zone",
+    "rule": "exit",
+    "enabled": true,
+    "color": "#3b82f6",
+    "appliesTo": "Lagos Operations",
+    "activeHours": "06:00 – 22:00",
+    "polygon": [
+      [6.4391, 3.366],
+      [6.4391, 3.39],
+      [6.418, 3.39],
+      [6.418, 3.366]
+    ]
+  },
+  {
+    "id": "GF-002",
+    "name": "Abuja Operations Zone",
+    "rule": "both",
+    "enabled": true,
+    "color": "#22d3ee",
+    "appliesTo": "Northern Routes",
+    "activeHours": "00:00 – 24:00",
+    "polygon": [
+      [9.0, 7.4],
+      [9.1, 7.4],
+      [9.1, 7.55],
+      [9.0, 7.55]
+    ]
+  },
+  {
+    "id": "GF-003",
+    "name": "Kano Restricted Area",
+    "rule": "entry",
+    "enabled": false,
+    "color": "#f59e0b",
+    "appliesTo": "All",
+    "activeHours": "20:00 – 06:00",
+    "polygon": [
+      [11.98, 8.55],
+      [12.02, 8.55],
+      [12.02, 8.62],
+      [11.98, 8.62]
+    ]
+  }
+]

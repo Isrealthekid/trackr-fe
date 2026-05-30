@@ -1,0 +1,23 @@
+[
+  {
+    "id": "FL-001",
+    "name": "Lagos Operations",
+    "vehicleCount": 4,
+    "manager": "Inioluwa Adeyinka",
+    "region": "South-West"
+  },
+  {
+    "id": "FL-002",
+    "name": "Northern Routes",
+    "vehicleCount": 3,
+    "manager": "Ibrahim Sani",
+    "region": "North"
+  },
+  {
+    "id": "FL-003",
+    "name": "Eastern Routes",
+    "vehicleCount": 1,
+    "manager": "Chuka Eze",
+    "region": "South-East"
+  }
+]

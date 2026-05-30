@@ -1,0 +1,98 @@
+[
+  {
+    "id": "DR-101",
+    "name": "Tunde Okafor",
+    "phone": "+234 803 412 8810",
+    "vehicleId": "VH-001",
+    "vehiclePlate": "LAG-482-XF",
+    "score": 88,
+    "tripsThisMonth": 42,
+    "harshBraking": 3,
+    "speeding": 1,
+    "nightDriving": 4
+  },
+  {
+    "id": "DR-102",
+    "name": "Aisha Bello",
+    "phone": "+234 706 882 1190",
+    "vehicleId": "VH-002",
+    "vehiclePlate": "ABJ-119-PQ",
+    "score": 74,
+    "tripsThisMonth": 36,
+    "harshBraking": 7,
+    "speeding": 4,
+    "nightDriving": 9
+  },
+  {
+    "id": "DR-103",
+    "name": "Chidi Eze",
+    "phone": "+234 812 558 9023",
+    "vehicleId": "VH-003",
+    "vehiclePlate": "PHC-733-MK",
+    "score": 91,
+    "tripsThisMonth": 48,
+    "harshBraking": 2,
+    "speeding": 2,
+    "nightDriving": 3
+  },
+  {
+    "id": "DR-104",
+    "name": "Halima Yusuf",
+    "phone": "+234 805 117 4421",
+    "vehicleId": "VH-004",
+    "vehiclePlate": "KAN-201-LG",
+    "score": 62,
+    "tripsThisMonth": 31,
+    "harshBraking": 11,
+    "speeding": 6,
+    "nightDriving": 12
+  },
+  {
+    "id": "DR-105",
+    "name": "Femi Adeyemi",
+    "phone": "+234 803 991 7782",
+    "vehicleId": "VH-005",
+    "vehiclePlate": "LAG-998-CR",
+    "score": 95,
+    "tripsThisMonth": 22,
+    "harshBraking": 0,
+    "speeding": 0,
+    "nightDriving": 2
+  },
+  {
+    "id": "DR-106",
+    "name": "Bola Adeniran",
+    "phone": "+234 802 461 5512",
+    "vehicleId": "VH-006",
+    "vehiclePlate": "IBA-664-DD",
+    "score": 81,
+    "tripsThisMonth": 38,
+    "harshBraking": 4,
+    "speeding": 3,
+    "nightDriving": 5
+  },
+  {
+    "id": "DR-107",
+    "name": "Ifeanyi Obi",
+    "phone": "+234 818 334 9088",
+    "vehicleId": "VH-007",
+    "vehiclePlate": "ENU-302-VV",
+    "score": 86,
+    "tripsThisMonth": 40,
+    "harshBraking": 3,
+    "speeding": 2,
+    "nightDriving": 4
+  },
+  {
+    "id": "DR-108",
+    "name": "Musa Garba",
+    "phone": "+234 803 287 6610",
+    "vehicleId": "VH-008",
+    "vehiclePlate": "KAD-555-AR",
+    "score": 78,
+    "tripsThisMonth": 33,
+    "harshBraking": 5,
+    "speeding": 3,
+    "nightDriving": 6
+  }
+]

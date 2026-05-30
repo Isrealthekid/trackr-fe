@@ -1,0 +1,37 @@
+[
+  {
+    "id": "M-1",
+    "name": "Inioluwa Adeyinka",
+    "email": "inioluwa@trackr.ng",
+    "role": "Owner",
+    "lastActive": "2026-05-28T13:42:00Z"
+  },
+  {
+    "id": "M-2",
+    "name": "Ibrahim Sani",
+    "email": "ibrahim@trackr.ng",
+    "role": "Admin",
+    "lastActive": "2026-05-28T12:11:00Z"
+  },
+  {
+    "id": "M-3",
+    "name": "Ngozi Eke",
+    "email": "ngozi@trackr.ng",
+    "role": "Manager",
+    "lastActive": "2026-05-28T10:08:00Z"
+  },
+  {
+    "id": "M-4",
+    "name": "Tope Adebayo",
+    "email": "tope@trackr.ng",
+    "role": "Dispatcher",
+    "lastActive": "2026-05-28T11:42:00Z"
+  },
+  {
+    "id": "M-5",
+    "name": "Anita Okonkwo",
+    "email": "anita@trackr.ng",
+    "role": "Viewer",
+    "lastActive": "2026-05-27T17:30:00Z"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RP-2026-05-W22",
+    "name": "Weekly Fuel — Lagos Operations",
+    "type": "fuel",
+    "scope": "Lagos Operations",
+    "range": "2026-05-19 → 2026-05-25",
+    "generatedAt": "2026-05-26T03:00:00Z",
+    "format": "pdf",
+    "sizeKb": 412
+  },
+  {
+    "id": "RP-2026-05-W21",
+    "name": "Driver Behaviour Summary",
+    "type": "behaviour",
+    "scope": "All vehicles",
+    "range": "2026-05-12 → 2026-05-18",
+    "generatedAt": "2026-05-19T03:00:00Z",
+    "format": "xlsx",
+    "sizeKb": 188
+  },
+  {
+    "id": "RP-2026-05-M",
+    "name": "Monthly Utilization",
+    "type": "utilization",
+    "scope": "All vehicles",
+    "range": "2026-04-01 → 2026-04-30",
+    "generatedAt": "2026-05-01T03:00:00Z",
+    "format": "pdf",
+    "sizeKb": 920
+  },
+  {
+    "id": "RP-2026-05-AL",
+    "name": "Alert Summary — Northern Routes",
+    "type": "alerts",
+    "scope": "Northern Routes",
+    "range": "2026-05-01 → 2026-05-28",
+    "generatedAt": "2026-05-28T06:00:00Z",
+    "format": "xlsx",
+    "sizeKb": 64
+  }
+]
