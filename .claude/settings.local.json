@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir C:\\\\Users\\\\Fowosere\\\\Desktop\\\\trackr-frontend *)",
+      "Bash(dir C:\\\\Users\\\\Fowosere\\\\Desktop\\\\trackr-frontend\\\\app *)",
+      "Bash(dir C:\\\\Users\\\\Fowosere\\\\Desktop\\\\trackr-frontend\\\\public *)",
+      "Bash(dir \"C:\\\\Users\\\\Fowosere\\\\Desktop\\\\trackr-frontend\\\\node_modules\\\\next\\\\dist\\\\docs\")",
+      "Bash(npm install *)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"/ %{http_code}\\\\n\" http://localhost:3055/)",
+      "Bash(curl -s -o /dev/null -w \"/login %{http_code}\\\\n\" http://localhost:3055/login)",
+      "Bash(curl -s -o /dev/null -w \"/dashboard %{http_code}\\\\n\" http://localhost:3055/dashboard)",
+      "Bash(curl -s -o /dev/null -w \"/vehicles %{http_code}\\\\n\" http://localhost:3055/vehicles)",
+      "Bash(curl -s -o /dev/null -w \"/vehicles/VH-001 %{http_code}\\\\n\" http://localhost:3055/vehicles/VH-001)",
+      "Bash(curl -s -o /dev/null -w \"ROOT %{http_code} LOGIN \" http://localhost:3055/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} VH-001 \" http://localhost:3055/login)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3055/vehicles/VH-001\")",
+      "Bash(curl -s -o /dev/null -w \"trips %{http_code} \" http://localhost:3055/trips)",
+      "Bash(curl -s -o /dev/null -w \"drivers %{http_code} \" http://localhost:3055/drivers)",
+      "Bash(curl -s -o /dev/null -w \"devices %{http_code} \" http://localhost:3055/devices)",
+      "Bash(curl -s -o /dev/null -w \"reports %{http_code} \" http://localhost:3055/reports)",
+      "Bash(curl -s -o /dev/null -w \"fleets %{http_code}\\\\n\" http://localhost:3055/fleets)",
+      "Bash(taskkill /F /FI \"WINDOWTITLE eq next dev*\")",
+      "Bash(powershell -Command 'Get-NetTCPConnection -LocalPort 3055 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }')"
+    ]
+  }
+}

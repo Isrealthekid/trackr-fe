@@ -1,26 +1,193 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette (dark only) */
+  --bg-base: #0a0c0f;
+  --bg-surface: #111418;
+  --bg-elevated: #181c22;
+  --bg-surface-2: #1E232C;
+  --bg-glass: rgba(255, 255, 255, 0.045);
+  --border-soft: #2A2F3A;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.08);
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --text-accent: #3b82f6;
+
+  /* Accents */
+  --accent: #3b82f6;
+  --accent-secondary: #22d3ee;
+
+  /* Status */
+  --status-online: #22c55e;
+  --status-offline: #ef4444;
+  --status-transit: #f59e0b;
+  --status-idle: #6b7280;
+  --status-completed: #10b981;
+  --status-awaiting: #a78bfa;
+  --status-warn: #E0A33E;
+  --status-danger: #E5564E;
+  --status-success: #3FB68B;
+
+  /* Glow */
+  --glow-blue: 0 0 16px rgba(59, 130, 246, 0.45);
+  --glow-green: 0 0 10px rgba(34, 197, 94, 0.4);
+  --glow-amber: 0 0 10px rgba(245, 158, 11, 0.4);
+  --glow-red: 0 0 10px rgba(239, 68, 68, 0.45);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-surface-2: var(--bg-surface-2);
+  --color-border-soft: var(--border-soft);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-glass: var(--border-glass);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-status-online: var(--status-online);
+  --color-status-offline: var(--status-offline);
+  --color-status-transit: var(--status-transit);
+  --color-status-idle: var(--status-idle);
+  --color-status-completed: var(--status-completed);
+  --color-status-awaiting: var(--status-awaiting);
+  --color-status-warn: var(--status-warn);
+  --color-status-danger: var(--status-danger);
+  --color-status-success: var(--status-success);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-dm-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "tnum" 1, "cv11" 1;
+}
+
+/* Tabular numbers everywhere data is shown */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scrollbar (calm dark) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-soft);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4150;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Leaflet dark map tweaks */
+.leaflet-container {
+  background: #0d1318 !important;
+  font-family: inherit;
+}
+/* CARTO dark tiles are already dark — only nudge contrast/saturation,
+   never invert (that's what caused the foggy grey overlay). */
+.leaflet-tile-pane {
+  filter: contrast(1.05) saturate(1.1);
+}
+.leaflet-control-attribution {
+  background: rgba(17, 20, 24, 0.7) !important;
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+  backdrop-filter: blur(8px);
+}
+.leaflet-control-attribution a {
+  color: var(--text-secondary) !important;
+}
+.leaflet-control-zoom a {
+  background: var(--bg-elevated) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-soft) !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--bg-surface-2) !important;
+  color: var(--text-primary) !important;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: rgba(17, 20, 24, 0.95) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Pulse for live markers */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.7;
+  }
+  80%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
   }
 }
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Vehicle marker (custom div icon) */
+.veh-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+.veh-marker::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  opacity: 0.5;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
